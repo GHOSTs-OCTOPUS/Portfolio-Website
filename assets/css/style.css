@@ -2,19 +2,26 @@
   #style.css
 \*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
+/*-----------------------------------*\
+  1.CUSTOM PROPERTY
+  2.RESET
+  3.REUSED STYLE
+  4.MAIN
+  5.SIDEBAR
+  6.NAVBAR
+  7.HOME
+  8.ABOUT
+  9.RESUME
+  10.PORTFOLIO
+  11.CONTACT
+  12.FOOTER
+  13.RESPONSIVE
+\*-----------------------------------*/
 
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
 :root {
 
   /**
@@ -305,10 +312,6 @@ main {
   min-width: 259px;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
@@ -487,6 +490,127 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
+/*-----------------------------------*\
+            #HOME
+\*-----------------------------------*/
+
+/*
+ #stats 
+*/
+
+.stats { padding-block: var(--section-padding); }
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stats-container {
+  display: grid;
+  gap: 30px;
+}
+
+.stats-card {
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+  border: 1px solid var(--jet);
+  border-radius: 25px;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+.stats-card:is(:hover, :focus) { transform: translateY(-5px); }
+
+.stats-card .card-icon {
+  background: var(--raw-seinna);
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.stats-card .card-icon img {
+  width: 70%;
+  filter: invert(1);
+}
+
+.stats-card .card-title {
+  width: calc(100% - 95px);
+  color: whitesmoke;
+  text-align: center;
+}
+
+.stats-card .card-title strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: initial;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+.stats-card > ion-icon { color: var(--color-secondary); }
+
+/*
+ #Awards
+*/ 
+
+.awards { padding-block: var(--section-padding); }
+
+.awards-list {
+  display: grid;
+  gap: 10px;
+  padding: 10;
+  list-style: none;
+}
+
+.awards-card {
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  transition: var(--transition-1);
+}
+
+.awards-card:is(:hover, :focus) { transform: translateY(-5px); }
+
+.awards-card .card-icon {
+  background: var(--raw-seinna);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.awards-card .card-icon img {
+  width: 125%;
+  filter: invert(1);
+}
+
+.awards-card .card-title {
+  width: calc(100% - 95px);
+  color: var(--light-gray);
+  text-align: center;
+}
+
+.awards-card .card-title strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: initial;
+  line-height: 2;
+  margin-top: 0.5px;
+}
+
+.awards-card > ion-icon { color: var(--color-secondary); }
 
 
 
@@ -794,35 +918,97 @@ main {
 /**
  * skills 
  */
+.skills { padding-block: var(--section-padding); }
 
-.skills-title { margin-bottom: 20px; }
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
 
-.skills-list { padding: 20px; }
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  color: var(--light-gray);
+  text-align: center;
+  background:var(--bg-secondary);
+  border: 1px solid var(--jet);
+  border-radius: 25px;
+  transition: background 0.3s ease;
+
+}
+
+.skill-icon i {
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
 
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
 
-.skill .title-wrapper {
+/* Category-specific colors */
+.clan { color: #61dafb; }
+.clans { color: #68a063; }
+.html { color: #FF6F00; }
+.css {color:gold}
+.js {color:greenyellow}
+.python { color: #3572A5; }
+.php {color:indigo}
+.mysql {color:blueviolet}
+.git {color:darkgoldenrod}
+.github {color:brown}
+.vs-code {color:aqua}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+      grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * expert 
+ */
+
+.expert-title { margin-bottom: 20px; }
+
+.expert-list { padding: 20px; }
+
+.expert-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.expert-text p { margin-bottom: 15px; }
+
+.expert-item:not(:last-child) { margin-bottom: 15px; }
+
+.expert .title-wrapper {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-bottom: 8px;
 }
 
-.skill .title-wrapper data {
+.expert .title-wrapper data {
   color: var(--light-gray);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
 
-.skill-progress-bg {
+.expert-progress-bg {
   background: var(--jet);
   width: 100%;
   height: 8px;
   border-radius: 10px;
 }
 
-.skill-progress-fill {
+.expert-progress-fill {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;

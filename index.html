@@ -16,9 +16,129 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!---Preloader style--->
+  <style>
+    /* Body styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Preloader container */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0d0d url('./assets/images/contactMail.d6d4086f.png') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+      visibility: visible;
+    }
+
+    /* Add overlay for better visibility */
+    #preloader::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.5);
+    }
+
+    /* Preloader text styles */
+    .preloader-text {
+      color: #ffeb3b;
+      margin-top: 20px;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: textFade 1.5s ease-in-out infinite;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Triangle loader styles */
+    .loader-triangle-3 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .loader-triangle-3 polygon {
+      stroke: #ffeb3b;
+      stroke-dasharray: 17;
+      animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+    }
+
+    /* Rest of the CSS remains the same */
+    @keyframes textFade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    #preloader.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @keyframes anm-tr-3-move {
+      to {
+        stroke-dashoffset: -136;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+  <!-- Preloader with H1 -->
+  <div id="preloader">
+    <div class="loader-triangle-3">
+      <svg id="triangle" width="50px" height="50px" viewBox="-3 -4 39 39">
+        <polygon
+          fill="transparent"
+          stroke="#ffeb3b"
+          stroke-width="2"
+          points="16,0 32,32 0,32"
+        ></polygon>
+      </svg>
+    </div>
+    <h1 class="preloader-text">Loading Portfolio...</h1>
+  </div>
+  <!-- Preloader Script -->
+  <script>
+    const MIN_LOAD_TIME = 2000;
+    const startTime = Date.now();
+
+    function hidePreloader() {
+      const remainingTime = MIN_LOAD_TIME - (Date.now() - startTime);
+      const preloader = document.getElementById("preloader");
+      
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+        document.body.style.overflow = 'visible';
+      }, Math.max(remainingTime, 0));
+    }
+
+    window.addEventListener('load', () => {
+      hidePreloader();
+      document.querySelector('.content').style.opacity = '1';
+    });
+
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    }
+  </script>
+
   <!--- #MAIN --->
   <main>
     <!--- #SIDEBAR COMPLETE --->
@@ -114,9 +234,9 @@
       <!--- #NAVBAR COMPLETE --->
       <nav class="navbar">
         <ul class="navbar-list">
-          <!--- <li class="navbar-item">
+      <!--<li class="navbar-item">
             <button class="navbar-link  " data-nav-link>Home</button>
-          </li>--->
+          </li>-->
 
           <li class="navbar-item">
             <button class="navbar-link active " data-nav-link>About</button>
@@ -137,8 +257,8 @@
       </nav>
 
 
-      <!--- #HOME INCOMPLELE 
-      <article class="home " data-page="home">
+      <!-- #HOME INCOMPLELE --> 
+  <!--<article class="home  " data-page="home">
         <header>
           <h2 class="h2 article-title">Welcome..!</h2>
         </header> 
@@ -148,7 +268,77 @@
           </p>
         </section>
 
-      </article> --->
+        <!--- #STATS ---
+        <section class="stats" id="stats">
+          <h2 class="h2 article-title">achievements</h2>
+            <div class="stats-section">
+              <div class="stats-container">
+                <a class="stats-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                  </div>
+                  <h2 class="h2 card-title">
+                    2+ <strong>Years of Experience</strong>
+                  </h2>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+              </div>
+
+              <div class="stats-container">
+                <a class="stats-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
+                  </div>
+                  <h2 class="h2 card-title">
+                    25+ <strong>Completed Projects</strong>
+                  </h2>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+              </div>
+
+              <div class="stats-container">
+                <a class="stats-card">
+                  <div class="card-icon">
+                    <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
+                  </div>
+                  <h2 class="h2 card-title">
+                    20+ <strong>Happy Clients</strong>
+                  </h2>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+        </section>
+
+        <!--- Awards and Recognitions ---
+        <section class="awards" id="awards">
+          <h3 class="h2 article-title">Awards and Recognitions</h3>
+          <h4 class="h4 service-title">Here are some of my awards </h4>
+            <ul class="awards-list">
+              <!--awards-list1--
+              <a href="#" class="awards-card">
+                <div class="card-icon">
+                  <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                </div>
+                <h2 class="h1 card-title">
+                  <strong>CodeCircuit Hackthon(May2K25)-Outlier AI</strong>
+                </h2>
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a> 
+              <!--awards-list2--
+              <a class="awards-card">
+                <div class="card-icon">
+                  <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                </div>
+                <h2 class="h2 card-title">
+                  <strong>Best Web App - Tech Competition 2023</strong>
+                </h2>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </ul> 
+        </section>
+
+      </article> -->
 
 
 
@@ -411,12 +601,7 @@
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
-        <section class="about-text">
-          <p>
-            My Journey..
-          </p>
-        </section>
-
+        <h3 class="h3 article-title">My Journey..</h3>
         <section class="timeline">
           <!--- #Experience --->
         <section class="timeline">
@@ -435,11 +620,7 @@
               <p class="timeline-text">
                 During my cybersecurity internship, I was responsible for supporting the team in various security
                 operations. I assisted in monitoring security systems, analysing logs for suspicious activity, and
-                responding to incidents promptly. This involved conducting vulnerability assessments and contributing to
-                penetration testing efforts to strengthen our systems defences. One of my notable accomplishments was
-                identifying and mitigating several critical vulnerabilities in our network infrastructure, which
-                significantly
-                enhanced our security posture. I also gained hands-on experience with tools like Nessus and Metasploit,
+                responding to incidents promptly. I also gained hands-on experience with tools like Nessus and Metasploit,
                 deepening my understanding of cybersecurity concepts such as threat detection, risk assessment, and
                 incident response. Throughout the internship, I actively participated in security awareness initiatives,
                 helping to educate employees about cybersecurity best practices and reinforcing a culture of vigilance
@@ -505,78 +686,103 @@
             </li>
           </ol>
         </section>
-        
-        <!--- #My skills --->
-        <section class="skill">
-          <h3 class="h3 article-title">My skills</h3>
-          <section class="about-text">
+
+        <!-- Skills Section --> 
+        <section class="skills">
+          <h3 class="h2 article-title">Technical Skills</h3>
+            <div class="skills-section ">
+              <div class="skills-container">
+                <h4 class="h4 service-title" >Languages</h4>
+                  <span class="skill-icon clan">C language</span>
+                  <span class="skill-icon clans">C++ language</span>
+                  <span class="skill-icon html">HTML</span>
+                  <span class="skill-icon css">CSS</span>
+                  <span class="skill-icon js">JavaScript</span>
+                  <span class="skill-icon python"> Python</span>
+                  <span class="skill-icon php"> Php</span>
+                  <span class="skill-icon mysql">MySQL</span>
+              </div>
+              <div class="skills-container">
+                <h4 class="h4 service-title">Tools</h4>
+                  <span class="skill-icon git">Git</span>
+                  <span class="skill-icon github">GitHub</span>
+                  <span class="skill-icon vs-code">VS Code</span>
+              </div>
+            </div>
+            <!-- Add more categories -->
+        </section>
+
+        <!--- #My expert --->
+        <section class="expert">
+          <h3 class="h2 article-title">My Experties..</h3>
+          <section class="expert-text">
             <p>
               Hear are some My Expert Area:  
             </p>
         </section>
-          <ul class="skills-list content-card">
-            <!--- #skills-item 1 --->
-            <li class="skills-item">
+          <ul class="expert-list content-card">
+            <!--- #expert-item 1 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">Portfolio design</h5>
                 <data value="80">80%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 80%;"></div>
               </div>
             </li>
-            <!--- #skills-item 2 --->
-            <li class="skills-item">
+            <!--- #expert-item 2 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">Custom Website Development</h5>
                 <data value="35">35%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 35%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 35%;"></div>
               </div>
             </li>
-            <!--- #skills-item 3 --->
-            <li class="skills-item">
+            <!--- #expert-item 3 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">E-commerce Solutions
                 </h5>
                 <data value="70">70%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 70%;"></div>
               </div>
             </li>
-            <!--- #skills-item 4 --->
-            <li class="skills-item">
+            <!--- #expert-item 4 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">UX/UIDesign
                 </h5>
                 <data value="30">30%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 30%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 30%;"></div>
               </div>
             </li>
-            <!--- #skills-item 5 --->
-            <li class="skills-item">
+            <!--- #expert-item 5 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">API Development & payment Integration
                 </h5>
                 <data value="20">20%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 20%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 20%;"></div>
               </div>
             </li>
-            <!--- #skills-item 6 --->
-            <li class="skills-item">
+            <!--- #expert-item 6 --->
+            <li class="expert-item">
               <div class="title-wrapper">
                 <h5 class="h5">Git & GitHub
                 </h5>
                 <data value="90">90%</data>
               </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+              <div class="expert-progress-bg">
+                <div class="expert-progress-fill" style="width: 90%;"></div>
               </div>
             </li>
           </ul>
