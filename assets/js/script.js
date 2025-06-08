@@ -191,3 +191,40 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+  // Unique namespace/key for your counter (replace with your GitHub username)
+  const NAMESPACE = "ghosts-octopus-portfolio";
+  const KEY = "visitor-count";
+
+  // Function to update the counter
+  function updateCounter() {
+    // 1. Try to get existing count from localStorage (for repeat visits)
+    let count = localStorage.getItem('siteVisits');
+    
+    // 2. If first visit, call API
+    if (!count) {
+      fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.value) {
+            // Update display
+            document.getElementById('visitorCount').textContent = data.value;
+            // Store in localStorage
+            localStorage.setItem('siteVisits', data.value);
+            // Add animation
+            document.querySelector('.visitor-counter').classList.add('pulse');
+            setTimeout(() => {
+              document.querySelector('.visitor-counter').classList.remove('pulse');
+            }, 500);
+          }
+        })
+        .catch(error => console.error("Counter error:", error));
+    } else {
+      // 3. Show existing count from localStorage
+      document.getElementById('visitorCount').textContent = count;
+    }
+  }
+
+  // Initialize on page load
+  window.addEventListener('DOMContentLoaded', updateCounter);
