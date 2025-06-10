@@ -159,7 +159,10 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html { 
+  font-family: var(--ff-poppins);
+  scroll-behavior: smooth;
+}
 
 body { background: var(--smoky-black); }
 
@@ -525,6 +528,58 @@ main {
   animation: pulse 0.5s ease;
 }
 
+/*
+ #recent work 
+*/
+.home-article {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background:  #2b2b2c;
+  padding: 1.5rem;
+  border: 1px solid var(--jet);
+  border-radius: 15px;
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.skills { padding-block: var(--section-padding); }
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  color: var(--light-gray);
+  text-align: center;
+  background:var(--bg-secondary);
+  border: 1px solid var(--jet);
+  border-radius: 25px;
+  transition: background 0.3s ease;
+
+}
+
+.skill-icon i {
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+}
+
+
 
 /*
  #stats 
@@ -554,7 +609,10 @@ main {
   border-radius: 25px;
   box-shadow: var(--shadow-1);
   transition: var(--transition-1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
+
 
 .stats-card:is(:hover, :focus) { transform: translateY(-5px); }
 
@@ -981,12 +1039,16 @@ main {
 
 
 /* Category-specific colors */
-.clan { color: #61dafb; }
-.clans { color: #68a063; }
-.html { color: #FF6F00; }
+.clan { color: #61dafb}
+.clans { color: #68a063}
+.html { color: #FF6F00}
 .css {color:gold}
 .js {color:greenyellow}
-.python { color: #3572A5; }
+.python { color: #3572A5}
+.bootstrap {color:blue}
+.react {color: deeppink}
+.node {color: darkgreen}
+.tensorflow {color: olive}
 .php {color:indigo}
 .mysql {color:darkred}
 .git {color:darkgoldenrod}
