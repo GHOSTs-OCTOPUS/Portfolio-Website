@@ -496,7 +496,50 @@ main {
 /*-----------------------------------*\
             #HOME
 \*-----------------------------------*/
+.home-article {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* === Availability Badge Styles === */
+.availability-badge {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  margin: 30px;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0, 255, 128, 0.3);
+  z-index: 10;
+}
 
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff99;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 8px #00ff99;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(0.6);
+   }
+  50% { 
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
 .visit { padding-block: var(--section-padding); }
 
 .visitor-counter {
@@ -531,11 +574,7 @@ main {
 /*
  #recent work 
 */
-.home-article {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 .project-card {
   background:  #2b2b2c;
@@ -1054,6 +1093,7 @@ main {
 .git {color:darkgoldenrod}
 .github {color:brown}
 .vs-code {color:aqua}
+.figma {color:fuchsia}
 
 
 /* Responsive Design */
@@ -1456,7 +1496,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-width: 950px;
   margin: 0 auto;
   padding: 15px 0 26px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  border-top: 1px solid rgba(223, 216, 8, 0.495); 
   color: rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
@@ -1465,7 +1505,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .footer .message {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.499);
   margin-bottom: 10px;
 } 
 .copyright {
