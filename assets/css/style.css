@@ -501,12 +501,30 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.about-text {
+  padding: 1rem;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  position: relative;
+  padding: 1rem 0;
+}
+/* Paragraph Styling */
+.about-message {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* adjust for dark background */
+  flex: 1 1 auto;
+  min-width: 200px;
+}
 /* === Availability Badge Styles === */
 .availability-badge {
-  position: absolute;
-  top: 65px;
-  right: 0;
-  margin: 30px;
   background-color: #1c1c1c;
   color: white;
   padding: 10px 18px;
@@ -516,8 +534,9 @@ main {
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 12px rgba(0, 255, 128, 0.3);
+  box-shadow: 0 0 12px rgba(59, 250, 1, 0.77);
   z-index: 10;
+  width: fit-content;
 }
 
 .status-dot {
@@ -526,7 +545,7 @@ main {
   background-color: #00ff99;
   border-radius: 50%;
   margin-right: 8px;
-  box-shadow: 0 0 8px #00ff99;
+  box-shadow: 0 0 8px #04e40fb6;
   animation: blink 1s infinite;
 }
 
@@ -540,6 +559,7 @@ main {
     transform: scale(1.4);
   }
 }
+
 .visit { padding-block: var(--section-padding); }
 
 .visitor-counter {
@@ -1666,6 +1686,23 @@ textarea.form-input::-webkit-resizer { display: none; }
   .navbar-list { gap: 20px; }
 
   .navbar-link { --fs-8: 14px; }
+
+  /**
+  * #avilability-badge
+  */
+@media (max-width: 600px) {
+  .about-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .availability-badge {
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
 
 
 
