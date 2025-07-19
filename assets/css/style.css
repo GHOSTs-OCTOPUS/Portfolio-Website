@@ -560,36 +560,6 @@ main {
   }
 }
 
-.visit { padding-block: var(--section-padding); }
-
-.visitor-counter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  color: #fffefe;
-  background: var(--bg-secondary);
-  padding: 25px;
-  border: 1px solid var(--jet);
-  border-radius: 25px;
-  box-shadow: var(--shadow-1);
-  transition: var(--transition-1);
-  
-  margin: 10px 0;
-} 
-
-
-/* Add animation for count updates */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.visitor-counter.pulse {
-  animation: pulse 0.5s ease;
-}
 
 /*
  #recent work 
