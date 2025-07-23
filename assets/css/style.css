@@ -684,7 +684,7 @@ main {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Consistent shadow */
 }
 
-#visitorCount {
+.visitorCount {
   color: #f9bf3f; /* Your accent color */
   transition: all 0.3s ease; /* Smooth count updates */
 }
