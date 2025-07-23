@@ -675,6 +675,20 @@ main {
 
 .stats-card > ion-icon { color: var(--color-secondary); }
 
+.visitor-stats-card {
+  cursor: default; /* Remove pointer cursor since it's not clickable */
+}
+
+.visitor-stats-card:hover {
+  transform: translateY(-5px); /* Match hover effect of other cards */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Consistent shadow */
+}
+
+#visitorCount {
+  color: #f9bf3f; /* Your accent color */
+  transition: all 0.3s ease; /* Smooth count updates */
+}
+
 /*
  #Awards
 */ 

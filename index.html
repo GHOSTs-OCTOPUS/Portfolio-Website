@@ -265,7 +265,7 @@
         <section class="about-text">
           <div class="about-row">
             <p class="about-message">
-              Welcome to my portfolio website..!
+              <!--keep it blank-->Welcome to my portfolio website..!
             </p>
             <!-- Availability Badge Section -->
             <div class="availability-badge">
@@ -356,16 +356,16 @@
                 </a>
               </div>
 
-              <!--<div class="stats-container">
-                <a href="" class="stats-card">
+              <div class="stats-container">
+                <div class="stats-card" id="visitor-stats-card">
                   <div class="card-icon">
-                    <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                    <img src="./assets/images/stats-card_icon-1.png" alt="Visitor icon">
                   </div>
                   <h2 class="h2 card-title">
-                    2+ <strong>Visitors</strong>
+                    <span id="visitorCount">Loading...</span> <strong>Visitors:</strong>
                   </h2>
-                </a>
-              </div>-->
+                </div>
+              </div>
 
             </div>
         </section>
@@ -1151,6 +1151,10 @@
   <!--- custom js link --->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="./assets/js/visitor-counter.js"></script>
 
   <!--- ionicon link --->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
