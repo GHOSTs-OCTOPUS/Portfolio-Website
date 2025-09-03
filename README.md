@@ -11,4 +11,4 @@ You can customize it. Start from `index.html`.
 This template has been developed by [@GHOSTs-OCTOPUS](https://github.com/GHOSTs-OCTOPUS). If you want to contact the author, you can reach out on [Gmail](kolevikasxyz@gmail.com). 
 
 
-License: MIT (see LICENSE file).
+License: MIT (see LICENSE file)
