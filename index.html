@@ -139,6 +139,7 @@
     }
   </script>
 
+
   <!--- #MAIN --->
   <main>
     <!--- #SIDEBAR COMPLETE --->
@@ -151,13 +152,14 @@
           <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
           <p class="title">Freelancer Web Developer</p><br>
           <p class="title">UI/UX Designer</p><br>
-          <p class="title">GrayHat-Hacker</p>
+          <!--<p class="title">GrayHat-Hacker</p>-->
         </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
+
       <!--- #SIDEBAR INFO --->
       <div class="sidebar-info_more">
         <div class="separator"></div>
@@ -182,7 +184,6 @@
               <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
             </div>
           </li>
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
@@ -192,8 +193,6 @@
               <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
             </div>
           </li>
-
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
@@ -204,6 +203,7 @@
             </div>
           </li>
         </ul>
+
         <!--- #SIDEBAR SOCIAL LINK --->
         <div class="separator"></div>
         <ul class="social-list">
@@ -211,14 +211,12 @@
             <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
-          </li>
-
+          </li>  
           <li class="social-item">
             <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
               <ion-icon name="logo-instagram"></ion-icon>
@@ -237,31 +235,28 @@
           <li class="navbar-item">
             <button class="navbar-link active " data-nav-link>Home</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li>
         </ul>
       </nav>
-
+      
 
       <!-- #HOME INCOMPLELE --> 
       <article class="home active " data-page="home">
         <header>
           <h2 class="h2 article-title">Welcome..!</h2>
         </header> 
+        <div class="movingText"><marquee>Important Information!!! >>> 1. Portfolio Under Development..</marquee></div>
         <section class="about-text">
           <div class="about-row">
             <p class="about-message">
@@ -280,13 +275,18 @@
         <h3 class="h3 article-title">What I do today?</h3>
         <h2 class="heading">Recently Complete</h2>
         <div class="project-card">
-            <h3>Portfolio-Website</h3>
-            <p>Fully opperate portfolio website with Html-Css-Javascript and Bootstrap</p>
+            <h3>2FA Authentication Application</h3>
+            <p>A secure web application that implements user registration and Two‑Factor Authentication (2FA) 
+              using TOTP (Time‑based One‑Time Password) compatible with standard authenticator apps 
+              (Google Authenticator, Authy, etc.).
+            </p>
             <div class="tech-used">
-                <span class="skill-icon html">Html</span>
-                <span class="skill-icon css">CSS</span>
-                <span class="skill-icon js">JavaScript</span>
-                <span class="skill-icon bootstrap">Bootstrap</span>
+                <span class="skill-icon react">React</span>
+                <span class="skill-icon vue3">Vue3</span>
+                <span class="skill-icon python">Python</span>
+                <span class="skill-icon unicorn">Uvicorn</span>
+                <span class="skill-icon mysql">MySQL</span>
+                <span class="skill-icon fastapi">FastAPI</span>
             </div>
         </div>
         <!-- Add more project cards -->
@@ -325,9 +325,8 @@
         <section class="stats" id="stats">
           <h2 class="h2 article-title">achievements</h2>
             <div class="stats-section">
-
               <div class="stats-container">
-                <a href="" class="stats-card">
+                <a class="stats-card" href="#">
                   <div class="card-icon">
                     <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
                   </div>
@@ -336,7 +335,6 @@
                   </h2>
                 </a>
               </div>
-
               <div class="stats-container">
                 <a class="stats-card" href="https://github.com/GHOSTs-OCTOPUS?tab=repositories">
                   <div class="card-icon">
@@ -347,9 +345,8 @@
                   </h2>
                 </a>
               </div>
-
               <div class="stats-container">
-                <a href="#testimonial" class="stats-card">
+                <a class="stats-card" href="#">
                   <div class="card-icon">
                     <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
                   </div>
@@ -358,7 +355,6 @@
                   </h2>
                 </a>
               </div>
-
               <div class="stats-container">
                 <div class="stats-card" id="visitor-stats-card">
                   <div class="card-icon">
@@ -369,7 +365,6 @@
                   </h2>
                 </div>
               </div>
-
             </div>
         </section>
 
@@ -386,16 +381,17 @@
                 <h2 class="h1 card-title">
                   <strong>CodeCircuit Hackthon(May2K25)-Outlier AI</strong>
                 </h2>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
               </a> 
               <!--awards-list2-->
-              <a class="awards-card">
+              <a href="#"class="awards-card">
                 <div class="card-icon">
                   <img src="./assets/images/trophy-outline.svg" alt="Badge icon">
                 </div>
                 <h2 class="h2 card-title">
                   <strong>Best Web App - Tech Competition 2023</strong>
                 </h2>
-                <!--<ion-icon name="chevron-forward-outline"></ion-icon>-->
+                <ion-icon name="chevron-forward-outline"></ion-icon>
               </a>
             </ul> 
         </section>
@@ -445,56 +441,58 @@
             <!--- #service-item 1 --->
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
-
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Professional Portfolio Development</h4>
-                <p class="service-item-text">
+                <!--<p class="service-item-text">
                   Create visually stunning and functional portfolios tailored to showcase individual or business
                   achievements.
-                </p>
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
             <!--- #service-item 2 --->
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
               </div>
-
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Custom Website Development from scratch</h4>
-                <p class="service-item-text">
+                <!--<p class="service-item-text">
                   Build fully customized websites from the ground up, ensuring responsive design and optimized
                   performance.
-                </p>
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
             <!--- #service-item 3 --->
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
               </div>
-
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">E-commerce Solutions</h4>
-                <p class="service-item-text">
+                <!--<p class="service-item-text">
                   I develop scalable and secure e-commerce platforms to help businesses grow online. 
-                  With features like secure payment gateways, and user-friendly interfaces.</p>
+                  With features like secure payment gateways, and user-friendly interfaces.
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
             <!--- #service-item 4 --->
             <li class="service-item">
               <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
-
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">UX/UI Design</h4>
-                <p class="service-item-text">
-                  With a focus on creating intuitive and visually appealing designs. From wireframes to high-fidelity prototypes, user-friendly interface for your web or mobile applications.</p>
+                <h4 class="h4 service-item-title"> Modern UI/UX Design</h4>
+                <!--<p class="service-item-text">
+                  With a focus on creating intuitive and visually appealing designs. 
+                  From wireframes to high-fidelity prototypes, user-friendly interface for your web or mobile applications.
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
             <!--- #service-item 5 --->
             <li class="service-item">
@@ -503,23 +501,38 @@
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Website Maintenance & Support</h4>
-                <p class="service-item-text">
+                <!--<p class="service-item-text">
                   I offer ongoing website maintenance services to ensure your site stays up-to-date and runs smoothly. 
                   From fixing bugs to adding new features.
-                </p>
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
             <!--- #service-item 6 --->
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Hosting & Domain Setup</h4>
+                <!--<p class="service-item-text">
+                  Ensuring flawless performance through rigorous testing.
+                </p>-->
+              </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </li>
+            <!--- #service-item 7 --->
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Testing and Debugging</h4>
-                <p class="service-item-text">
+                <!--<p class="service-item-text">
                   Ensuring flawless performance through rigorous testing.
-                </p>
+                </p>-->
               </div>
+              <ion-icon name="chevron-forward-outline"></ion-icon>
             </li>
           </ul>
 
@@ -775,6 +788,8 @@
                   <span class="skill-icon html">HTML</span>
                   <span class="skill-icon css">CSS</span>
                   <span class="skill-icon js">JavaScript</span>
+                  <span class="skill-icon react">React</span>
+                  <span class="skill-icon bootstrap">Bootstrap</span>
                   <span class="skill-icon python"> Python</span>
                   <span class="skill-icon php"> Php</span>
                   <span class="skill-icon mysql">MySQL</span>
@@ -785,6 +800,9 @@
                   <span class="skill-icon github">GitHub</span>
                   <span class="skill-icon vs-code">VS Code</span>
                   <span class="skill-icon figma">Figma</span>
+                  <span class="skill-icon versal">Versal</span>
+                  <span class="skill-icon netlify">Netlify</span>
+                  <span class="skill-icon firebase">Firebase</span>
               </div>
             </div>
             <!-- Add more categories -->
@@ -995,8 +1013,8 @@
                 <p class="project-category">Web Game<br>Complete.</p>
               </a>
             </li>
-            <!--- project-item 7 
-            <li class="project-item  active" data-filter-item data-category="other">
+            <!--- project-item 7 --
+            <!--<li class="project-item  active" data-filter-item data-category="other">
               <a href="https://github.com/GHOSTs-OCTOPUS/smoke-effect-on-Name">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1074,15 +1092,15 @@
               </a>
             </li>
             <!--- project-item 13 --->
-            <li class="project-item  active" data-filter-item data-category="other">
-              <a href="https://github.com/GHOSTs-OCTOPUS/CodeCircuit-Hackathon-2K25">
+            <li class="project-item  active" data-filter-item data-category="client project">
+              <a href="https://github.com/GHOSTs-OCTOPUS">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-13.jpg" alt="HAckathon" loading="lazy">
+                  <img src="./assets/images/2FA Authentication Application.jpg" alt="HAckathon" loading="lazy">
                 </figure>
-                <h3 class="project-title">CodeCircuit-Hackathon-2K25 </h3>
+                <h3 class="project-title">2FA Authentication Application </h3>
                 <p class="project-category">Web development <br>Complete.</p>
               </a>
             </li>
@@ -1150,7 +1168,7 @@
   <!--- #FOOTER COMPLETE --->
   <footer class="footer">
     <small class="message">Thanks for visiting to ME and happy coding..! :)</small>
-    <small class="copyright">&copy; Developed By GHOSTs-OCTOPUS. Copyright june 2025. All rights reserved.</small>
+    <small class="copyright">&copy; Developed By GHOSTs-OCTOPUS. Update on October16 2025. All rights reserved.</small>
   </footer>
 
   <!--- custom js link --->

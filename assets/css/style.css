@@ -492,6 +492,14 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+.movingText{
+    width: 50vw;
+    margin: 10px;
+    font-family: var(--mainfont);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: red;
+}
 
 /*-----------------------------------*\
             #HOME
@@ -1105,7 +1113,13 @@ main {
 .github {color:brown}
 .vs-code {color:aqua}
 .figma {color:fuchsia}
-
+.fastapi {color:yellowgreen}
+.pyotp {color:lavender}
+.vue3 {color:green}
+.uvicorn {color:rgb(10, 19, 90) }
+.versal {color:olive}
+.netlify {color: mediumaquamarine;}
+.firebase {color:firebrick}
 
 /* Responsive Design */
 @media (max-width: 768px) {
