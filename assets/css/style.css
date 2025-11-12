@@ -15,7 +15,8 @@
   10.PORTFOLIO
   11.CONTACT
   12.FOOTER
-  13.RESPONSIVE
+  13.SERVICE DETAILS
+  14.RESPONSIVE
 \*-----------------------------------*/
 
 
@@ -492,14 +493,7 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
-.movingText{
-    width: 50vw;
-    margin: 10px;
-    font-family: var(--mainfont);
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: red;
-}
+
 
 /*-----------------------------------*\
             #HOME
@@ -508,6 +502,24 @@ main {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.movingText{
+    width: 53vw;
+    margin: 5px;
+    font-family: var(--mainfont);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f9bf3f;
+}
+.movingText B{
+  color:darkred;
+}
+.movingText u{
+  color:saddlebrown;
+}
+.movingText ub{
+  color: #f9bf3f;
 }
 
 .about-text {
@@ -657,7 +669,6 @@ main {
   transition: transform 0.2s ease;
 }
 
-
 .stats-card:is(:hover, :focus) { transform: translateY(-5px); }
 
 .stats-card .card-icon {
@@ -758,8 +769,7 @@ main {
   margin-top: 0.5px;
 }
 
-.awards-card > ion-icon { color: var(--color-secondary); }
-
+.awards-card > ion-icon { color: var(--orange-yellow-crayola); }
 
 
 /*-----------------------------------*\
@@ -820,7 +830,7 @@ main {
 .service-item-title { margin-bottom: 7px; }
 
 .service-item-text {
-  color: var(--light-gray);
+  color: var(--orange-yellow-crayola);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
@@ -1521,7 +1531,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-width: 950px;
   margin: 0 auto;
   padding: 15px 0 26px;
-  border-top: 1px solid rgba(223, 216, 8, 0.495); 
+  border-top: 1px solid var(--orange-yellow-crayola);
   color: rgba(255, 255, 255, 0.4);
   display: flex;
   flex-direction: column;
@@ -1533,10 +1543,46 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: rgba(255, 255, 255, 0.499);
   margin-bottom: 10px;
 } 
-.copyright {
-  font-size: 16px;
+.message b{
+  color: darkred;
+  font-size: 20px;
 }
 
+.copyright {
+  font-size: 18px;
+}
+
+.copyright b {
+  color:rgba(255, 255, 255, 0.596) ;
+}
+
+
+/*-----------------------------------*\
+  #SERVICE DETAILS
+\*-----------------------------------*/
+.details-article {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  position: relative;
+  padding: 1rem 0;
+}
+/* Paragraph Styling */
+.about-message {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff; /* adjust for dark background */
+  flex: 1 1 auto;
+  min-width: 200px;
+}
 
 
 /*-----------------------------------*\

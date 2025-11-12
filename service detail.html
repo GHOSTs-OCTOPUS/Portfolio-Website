@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Freelancer Web Developer</title>
+    <!--- favicon --->
+    <link rel="shortcut icon" href="./assets/images/logo 1.webp" type="image/x-icon">
+
+    <!--- custom css link --->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!---Preloader style--->
+    <style>
+      /* Body styles */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* Preloader container */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0d0d0d url('./assets/images/download.gif') center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+        visibility: visible;
+      }
+
+      /* Add overlay for better visibility */
+      #preloader::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(13, 13, 13, 0.5);
+      }
+
+      /* Preloader text styles */
+      .preloader-text {
+        color: #ffeb3b;
+        margin-top: 20px;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        opacity: 0;
+        animation: textFade 1.5s ease-in-out infinite;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Triangle loader styles */
+      .loader-triangle-3 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .loader-triangle-3 polygon {
+        stroke: #ffeb3b;
+        stroke-dasharray: 17;
+        animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+      }
+
+      /* Rest of the CSS remains the same */
+      @keyframes textFade {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+
+      #preloader.hidden {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      @keyframes anm-tr-3-move {
+        to {
+          stroke-dashoffset: -136;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- Preloader with H1 --
+    <div id="preloader">
+      <div class="loader-triangle-3">
+        <svg id="triangle" width="50px" height="50px" viewBox="-3 -4 39 39">
+          <polygon
+            fill="transparent"
+            stroke="#ffeb3b"
+            stroke-width="2"
+            points="16,0 32,32 0,32"
+          ></polygon>
+        </svg>
+      </div>
+      <h1 class="preloader-text">Loading Portfolio...</h1>
+    </div>
+    <!-- Preloader Script --
+    <script>
+      const MIN_LOAD_TIME = 2000;
+      const startTime = Date.now();
+
+      function hidePreloader() {
+        const remainingTime = MIN_LOAD_TIME - (Date.now() - startTime);
+        const preloader = document.getElementById("preloader");
+        
+        setTimeout(() => {
+          preloader.classList.add('hidden');
+          document.body.style.overflow = 'visible';
+        }, Math.max(remainingTime, 0));
+      }
+
+      window.addEventListener('load', () => {
+        hidePreloader();
+        document.querySelector('.content').style.opacity = '1';
+      });
+
+      if (document.readyState === 'complete') {
+        hidePreloader();
+      }
+    </script>-->
+
+
+    <!--- #MAIN --->
+    <main>
+      <!--- #SIDEBAR COMPLETE --->
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="./assets/images/myavatar.png" alt="Vikas Kole." width="80">
+          </figure>
+          <div class="info-content">
+            <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
+            <p class="title">Freelancer Web Developer</p><br>
+            <p class="title">UI/UX Designer</p><br>
+            <!--<p class="title">GrayHat-Hacker</p>-->
+          </div>
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <!--- #SIDEBAR INFO --->
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+              <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="document-text-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">CV.devloper >></p>
+                <a href="./assets/images/VIKAS KOLE 20250824.pdf" class="contact-link">Download</a>
+                <p class="contact-title">CV.hacker >></p>
+                <a href="./assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link">Download</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Pandharpur, MH, India</address>
+              </div>
+            </li>
+          </ul>
+
+          <!--- #SIDEBAR SOCIAL LINK --->
+          <div class="separator"></div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>  
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--- #main-content Complete --->
+      <div class="main-content">
+        <!--- #NAVBAR COMPLETE --->
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link><a href="./index.html" style="color:whitesmoke">Home</a></button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>service details</button>
+            </li>
+          </ul>
+        </nav>
+        <!-- #service details INCOMPLELE --> 
+        <article class="details active " data-page="home">
+          <header>
+            <h2 class="h2 article-title">Service Details..!</h2>
+              <div class="about-row">
+                  <p class="about-message">
+                  Welcome to my Service details..!
+                  </p>
+              </div>
+              <div class="movingText">
+                  <marquee>
+                      <B>Important Information >>></B>
+                          <u>1. Portfolio Under Development..  
+                            2.Service details Page<ub>Under Constraction..</ub>
+                          </u>
+                  </marquee>
+              </div>        
+          </header>
+        </article>
+      </div>
+    </main>
+
+    <!--- #FOOTER COMPLETE --->
+    <footer class="footer">
+      <small class="message">Thanks for visiting to ME and happy coding..! :)</small>
+      <small class="copyright">&copy; Developed By GHOSTs-OCTOPUS. Update on November12 2025. All rights reserved.</small>
+    </footer>
+
+    <!--- custom js link --->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/visitor-counter.js"></script>
+
+    <!--- ionicon link --->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+
+</html>
