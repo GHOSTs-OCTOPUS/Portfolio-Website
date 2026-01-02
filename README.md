@@ -1,5 +1,40 @@
 # Portfolio | Freelancer Web Developer
 
+## File Structure:
+
+ portfolio/<br>
+├── assets/<br>
+│   ├── css/<br>
+│   │   └── style.css<br>
+│   ├── images/<br>
+│   │   ├── 2FA Authentication Application.jpg<br>
+│   │   ├── avatar-1.png<br>
+│   │   ├── avatar-2.png<br>
+│   │   ├── avatar-3.png<br>
+│   │   ├── avatar-4.png<br>
+│   │   ├── ...<br>
+│   ├── js/<br>
+│   │    ├── portfolio.js<br>
+│   │    ├── script.js<br>
+│   │    └── visitor-counter.js<br>
+├── Services/<br>
+│   ├── content-writing.html<br>
+│   ├── hosting&domain.html<br>
+│   ├── logo-design.html<br>
+│   ├── maintenaance&support.html<br>
+│   ├── portfolio-development.html<br>
+│   ├── Services Page.html<br>
+│   ├── student-project.html<br>
+│   ├── ui-ux-design.html<br>
+│   └── Website-development.html<br>  
+├── about.html<br>
+├── contact.html<br>
+├── index.html<br>
+├── portfolio.html<br>
+├── ReadMe.md<br>
+├── resume.html<br>
+
+
 ## Run this website
 
 Hit **Run** up there, or just hit `Cmd + ENTER`!
@@ -19,4 +54,4 @@ License: MIT (see LICENSE file)
 
 
 Credit: [kole vikas](https://github.com/GHOSTs-OCTOPUS)<BR>
-Last Edited on: 16/10/2025.
+Last Edited on: January1 2026.

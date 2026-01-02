@@ -1,0 +1,430 @@
+<!--formate complete-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio V2 | Freelancer Web Developer</title>
+  <!--- favicon --->
+  <link rel="shortcut icon" href="./assets/images/logo 1.webp" type="image/x-icon">
+
+  <!--- custom css link --->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--- google font link --->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!---Preloader style--->
+  <style>
+    /* Body styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Preloader container */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0d0d url('./assets/images/download.gif') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+      visibility: visible;
+    }
+
+    /* Add overlay for better visibility */
+    #preloader::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.5);
+    }
+
+    /* Preloader text styles */
+    .preloader-text {
+      color: #ffeb3b;
+      margin-top: 20px;
+      font-size: 1.5em;
+      letter-spacing: 2px;
+      opacity: 0;
+      animation: textFade 1.5s ease-in-out infinite;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Triangle loader styles */
+    .loader-triangle-3 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .loader-triangle-3 polygon {
+      stroke: #ffeb3b;
+      stroke-dasharray: 17;
+      animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+    }
+
+    /* Rest of the CSS remains the same */
+    @keyframes textFade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    #preloader.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @keyframes anm-tr-3-move {
+      to {
+        stroke-dashoffset: -136;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Preloader with H1 -->
+  <div id="preloader">
+    <div class="loader-triangle-3">
+      <svg id="triangle" width="50px" height="50px" viewBox="-3 -4 39 39">
+        <polygon
+          fill="transparent"
+          stroke="#ffeb3b"
+          stroke-width="2"
+          points="16,0 32,32 0,32"
+        ></polygon>
+      </svg>
+    </div>
+    <h1 class="preloader-text">Loading Portfolio...</h1>
+  </div>
+  <!-- Preloader Script -->
+  <script>
+    const MIN_LOAD_TIME = 750;
+    const startTime = Date.now();
+
+    function hidePreloader() {
+      const remainingTime = MIN_LOAD_TIME - (Date.now() - startTime);
+      const preloader = document.getElementById("preloader");
+      
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+        document.body.style.overflow = 'visible';
+      }, Math.max(remainingTime, 0));
+    }
+
+    window.addEventListener('load', () => {
+      hidePreloader();
+      document.querySelector('.content').style.opacity = '1';
+    });
+
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    }
+  </script>
+
+
+  <!--- #MAIN --->
+  <main>
+    <!--- #SIDEBAR COMPLETE --->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/myavatar.png" alt="Vikas Kole." width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
+          <p class="title">Freelancer Web Developer</p><br>
+          <p class="title">UI/UX Designer</p>
+          <!--<p class="title">GrayHat-Hacker</p>-->
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <!--- #SIDEBAR INFO --->
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+            <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">CV.developer >></p>
+              <a href="./assets/images/VIKAS KOLE 20251226.pdf" class="contact-link" download="VIKAS_KOLE_Developer_CV.pdf">Download</a>
+              <!--<p class="contact-title">CV.hacker >></p>
+              <a href="./assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link" download="VIKAS_KOLE_Cybersecurity_CV.pdf">Download</a>
+            </div>-->
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Pandharpur, MH, India</address>
+            </div>
+          </li>
+        </ul>
+        <!--- #SIDEBAR SOCIAL LINK --->
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>  
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <!--- #main-content Complete --->
+    <div class="main-content">
+      <!--- #NAVBAR COMPLETE --->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link active" data-nav-link>Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="resume.html" class="navbar-link" data-nav-link>Resume</a>
+          </li>
+          <!--<li class="navbar-item">
+            <a href="./Pages/Services Page.html" class="navbar-link" data-nav-link>Services</a>
+          </li>-->
+          <li class="navbar-item">
+            <a href="portfolio.html" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+        </ul>
+      </nav>
+      
+
+      <!-- #HOME COMPLETE --> 
+        <article class="home active " data-page="home">
+            <header>
+            <h2 class="h2 article-title">Welcome..!</h2>
+            </header> 
+            <div class="movingText">
+            <marquee>
+                <B>Important Information >>></B>
+                <u>1. Portfolio Under Development..  
+                   2.Service details Page<ub>Under Construction..</ub>
+                </u>
+            </marquee>
+            </div>
+            <section class="about-text">
+                <div class="about-row">
+                    <p class="about-message">
+                    Welcome to my portfolio website..!
+                    </p>
+                    <!-- Availability Badge Section -->
+                    <div class="availability-badge">
+                    <span class="status-dot"></span>
+                        Available For Hire
+                    </div>
+                </div>
+            </section>
+
+            <!--recent work-->
+        <section class="projects-complete" id="project-complelte">
+            <h3 class="h3 article-title">What I do today?</h3>
+            <h2 class="heading">Recently Complete</h2>
+            <div class="project-card">
+                <h3>2FA Authentication Application</h3>
+                <p>A secure web application that implements user registration and Two‑Factor Authentication (2FA) 
+                using TOTP (Time‑based One‑Time Password) compatible with standard authenticator apps 
+                (Google Authenticator, Authy, etc.).
+                </p>
+                <div class="tech-used">
+                    <span class="skill-icon react">React</span>
+                    <span class="skill-icon vue3">Vue3</span>
+                    <span class="skill-icon python">Python</span>
+                    <span class="skill-icon unicorn">Uvicorn</span>
+                    <span class="skill-icon mysql">MySQL</span>
+                    <span class="skill-icon fastapi">FastAPI</span>
+                </div>
+            </div>
+            <!-- Add more project cards -->
+        </section>
+
+            <!-- In Progress Projects -->
+        <section class="projects-complete" id="project-complelte">
+            <h2 class="heading">In Progress</h2>
+            <div class="project-card">
+                <h3>E-commerce Platform</h3>
+                <p>Full-stack e-commerce solution with React and Node.js</p>
+                <div class="tech-used">
+                    <span class="skill-icon react">React</span>
+                    <span class="skill-icon node">Node.js</span>
+                </div>
+            </div>
+            <!-- Add more project cards -->
+        </section>
+
+            <!--Up Coming Project-->
+            <section class="projects-in-progress">
+            <h2>up coming</h2>
+            <div class="project-card">
+                <h3>AI Chat Application</h3>
+                <p>Machine learning powered chat interface</p>
+                <div class="tech-used">
+                    <span class="skill-icon python">Python</span>
+                    <span class="skill-icon tensorflow">TensorFlow</span>
+                </div>
+            </div>
+            <!-- Add more project cards -->
+            </section>
+
+
+            <!--- #STATS --->
+            <section class="stats" id="stats">
+            <h2 class="h2 article-title">achievements</h2>
+                <div class="stats-section">
+                <div class="stats-container">
+                    <a class="stats-card" href="#">
+                    <div class="card-icon">
+                        <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                        2+ <strong>Years of Experience</strong>
+                    </h2>
+                    </a>
+                </div>
+                <div class="stats-container">
+                    <a class="stats-card" href="https://github.com/GHOSTs-OCTOPUS?tab=repositories">
+                    <div class="card-icon">
+                        <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                        30+ <strong>Completed Projects</strong>
+                    </h2>
+                    </a>
+                </div>
+                <div class="stats-container">
+                    <a class="stats-card" href="#">
+                    <div class="card-icon">
+                        <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                        20+ <strong>Happy Clients</strong>
+                    </h2>
+                    </a>
+                </div>
+                <div class="stats-container">
+                    <div class="stats-card" id="visitor-stats-card">
+                    <div class="card-icon">
+                        <img src="./assets/images/stats-card_icon-1.png" alt="Visitor icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                        <span id="visitorCount">Loading...</span> <strong>Visitors</strong>
+                    </h2>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!--- Awards and Recognitions --->
+            <section class="awards" id="awards">
+            <h3 class="h2 article-title">Awards and Recognitions</h3>
+            <h4 class="h4 service-title">Here are some of my awards: </h4>
+                <ul class="awards-list">
+                <!--awards-list1-->
+                <a href="https://github.com/GHOSTs-OCTOPUS/CodeCircuit-Hackathon-2K25" class="awards-card">
+                    <div class="card-icon">
+                    <img src="./assets/images/medal-outline.svg" alt="medal icon">
+                    </div>
+                    <h2 class="h1 card-title">
+                    <strong>CodeCircuit Hackthon(May2K25)-Outlier AI</strong>
+                    </h2>
+                    <ion-icon name="chevron-forward-outline">></ion-icon>
+                </a> 
+                <!--awards-list2-->
+                <a href="#"class="awards-card">
+                    <div class="card-icon">
+                    <img src="./assets/images/trophy-outline.svg" alt="Badge icon">
+                    </div>
+                    <h2 class="h2 card-title">
+                    <strong>Best Web App - Tech Competition 2023</strong>
+                    </h2>
+                    <ion-icon name="chevron-forward-outline">></ion-icon>
+                </a>
+                </ul> 
+            </section>
+
+        </article>
+    </div>
+
+  </main>
+
+  <!--- #FOOTER COMPLETE --->
+    <footer class="footer">
+      <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+      <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>January1 2026</b>. All rights reserved.</small>
+    </footer>
+
+  <!--- custom js link --->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/visitor-counter.js"></script> 
+
+  <!--- ionicons link --->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
