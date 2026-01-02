@@ -2,7 +2,7 @@
 
 ## File Structure:
 
- portfolio/<br>
+portfolio/<br>
 ├── assets/<br>
 │   ├── css/<br>
 │   │   └── style.css<br>
@@ -26,13 +26,15 @@
 │   ├── Services Page.html<br>
 │   ├── student-project.html<br>
 │   ├── ui-ux-design.html<br>
-│   └── Website-development.html<br>  
+│   └── Website-development.html  
 ├── about.html<br>
 ├── contact.html<br>
 ├── index.html<br>
 ├── portfolio.html<br>
-├── ReadMe.md<br>
 ├── resume.html<br>
+├── LICENSE<br>
+├── Screenshot 2025-01-15 140705.png<br>
+└── ReadMe.md<br>
 
 
 ## Run this website
