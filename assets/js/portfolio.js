@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   setupPagination();
   setupFilterButtons();
-  
+
   // Also setup mobile filter select
   setupFilterSelect();
 });
@@ -176,17 +176,17 @@ function renderProjects() {
   const startIndex = (currentPage - 1) * projectsPerPage;
   const endIndex = startIndex + projectsPerPage;
   const pageProjects = filteredProjects.slice(startIndex, endIndex);
-  
+
   // Clear project list
   projectList.innerHTML = '';
-  
+
   // Add projects for current page
   pageProjects.forEach(project => {
     const projectItem = document.createElement('li');
     projectItem.className = 'project-item active';
     projectItem.setAttribute('data-filter-item', '');
     projectItem.setAttribute('data-category', project.category);
-    
+
     projectItem.innerHTML = `
       <a href="${project.link}" target="_blank">
         <figure class="project-img">
@@ -199,13 +199,13 @@ function renderProjects() {
         <p class="project-category">${project.description}</p>
       </a>
     `;
-    
+
     projectList.appendChild(projectItem);
   });
-  
+
   // Update pagination info
   updatePaginationInfo();
-  
+
   // Show/hide pagination based on number of projects
   if (filteredProjects.length <= projectsPerPage) {
     paginationContainer.style.display = 'none';
@@ -219,15 +219,15 @@ function updatePaginationInfo() {
   const total = filteredProjects.length;
   const start = ((currentPage - 1) * projectsPerPage) + 1;
   const end = Math.min(currentPage * projectsPerPage, total);
-  
+
   startItem.textContent = start;
   endItem.textContent = end;
   totalItems.textContent = total;
-  
+
   // Update button states
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === Math.ceil(total / projectsPerPage);
-  
+
   // Update page numbers
   renderPageNumbers();
 }
@@ -236,12 +236,12 @@ function updatePaginationInfo() {
 function renderPageNumbers() {
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
   paginationNumbers.innerHTML = '';
-  
+
   if (totalPages <= 1) return;
-  
+
   // Always show first page
   addPageNumber(1);
-  
+
   // Show ellipsis if needed
   if (currentPage > 3) {
     const ellipsis = document.createElement('span');
@@ -249,14 +249,14 @@ function renderPageNumbers() {
     ellipsis.textContent = '...';
     paginationNumbers.appendChild(ellipsis);
   }
-  
+
   // Show pages around current page
   for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
     if (i !== 1 && i !== totalPages) {
       addPageNumber(i);
     }
   }
-  
+
   // Show ellipsis if needed
   if (currentPage < totalPages - 2) {
     const ellipsis = document.createElement('span');
@@ -264,7 +264,7 @@ function renderPageNumbers() {
     ellipsis.textContent = '...';
     paginationNumbers.appendChild(ellipsis);
   }
-  
+
   // Always show last page if there is more than one page
   if (totalPages > 1) {
     addPageNumber(totalPages);
@@ -294,7 +294,7 @@ function setupPagination() {
       renderProjects();
     }
   });
-  
+
   nextBtn.addEventListener('click', () => {
     const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
     if (currentPage < totalPages) {
@@ -307,16 +307,16 @@ function setupPagination() {
 // Setup filter buttons
 function setupFilterButtons() {
   const filterButtons = document.querySelectorAll("[data-filter-btn]");
-  
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
       applyFilter(filter);
-      
+
       // Update active state of filter buttons
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      
+
       // Update mobile filter select value
       updateFilterSelectValue(filter);
     });
@@ -328,20 +328,20 @@ function setupFilterSelect() {
   const filterSelect = document.querySelector('.filter-select');
   const selectValue = document.querySelector('.select-value');
   const selectList = document.querySelector('.select-list');
-  
+
   if (filterSelect && selectValue && selectList) {
     // Toggle select list
     filterSelect.addEventListener('click', () => {
       selectList.classList.toggle('active');
     });
-    
+
     // Close select when clicking outside
     document.addEventListener('click', (e) => {
       if (!filterSelect.contains(e.target)) {
         selectList.classList.remove('active');
       }
     });
-    
+
     // Handle select item clicks
     const selectItems = selectList.querySelectorAll('.select-item button');
     selectItems.forEach(item => {
@@ -349,7 +349,7 @@ function setupFilterSelect() {
         const filter = item.getAttribute('data-filter');
         applyFilter(filter);
         updateFilterSelectValue(filter);
-        
+
         // Update active state in filter buttons
         const filterButtons = document.querySelectorAll("[data-filter-btn]");
         filterButtons.forEach(b => {
@@ -358,7 +358,7 @@ function setupFilterSelect() {
             b.classList.add('active');
           }
         });
-        
+
         // Close select list
         selectList.classList.remove('active');
       });
@@ -370,9 +370,9 @@ function setupFilterSelect() {
 function updateFilterSelectValue(filter) {
   const selectValue = document.querySelector('.select-value');
   if (!selectValue) return;
-  
+
   let displayText = 'Select category';
-  switch(filter) {
+  switch (filter) {
     case 'all':
       displayText = 'All';
       break;
@@ -386,7 +386,7 @@ function updateFilterSelectValue(filter) {
       displayText = 'Other';
       break;
   }
-  
+
   selectValue.textContent = displayText;
 }
 
@@ -394,14 +394,14 @@ function updateFilterSelectValue(filter) {
 function applyFilter(filter) {
   currentFilter = filter;
   currentPage = 1;
-  
+
   // Filter projects
   if (filter === 'all') {
     filteredProjects = [...projectsData];
   } else {
     filteredProjects = projectsData.filter(project => project.category === filter);
   }
-  
+
   // Render filtered projects
   renderProjects();
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio V2 | Freelancer Web Developer</title>
+  <title>Service page/ Custom Website Development | Freelancer Web Developer</title>
   <!--- favicon --->
   <link rel="shortcut icon" href="../assets/images/logo 1.webp" type="image/x-icon">
   <!--- custom css link --->
@@ -28,7 +28,7 @@
         <div class="info-content">
           <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
           <p class="title">Freelancer Web Developer</p><br>
-          <p class="title">UI/UX Designer</p><br>
+          <p class="title">UI/UX Designer</p>
           <!--<p class="title">GrayHat-Hacker</p>-->
         </div>
         <button class="info_more-btn" data-sidebar-btn>
@@ -36,20 +36,20 @@
           <ion-icon name="chevron-down"></ion-icon>
         </button>
       </div>
-
       <!--- #SIDEBAR INFO --->
       <div class="sidebar-info_more">
         <div class="separator"></div>
         <ul class="contacts-list">
-            <li class="contact-item">
+          <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="document-text-outline"></ion-icon>
             </div>
             <div class="contact-info">
-              <p class="contact-title">CV.devloper >></p>
-              <a href="../assets/images/VIKAS KOLE 20251226.pdf" class="contact-link">Download</a>
-              <p class="contact-title">CV.hacker >></p>
-              <a href="../assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link">Download</a>
+              <p class="contact-title">CV.developer >></p>
+              <a href="../assets/images/VIKAS KOLE 20250824.pdf" class="contact-link"
+                download="VIKAS_KOLE_Developer_CV.pdf">Download</a>
+              <!--<p class="contact-title">CV.hacker >></p>
+              <a href="../assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link" download="VIKAS_KOLE_Cybersecurity_CV.pdf">Download</a>-->
             </div>
           </li>
           <li class="contact-item">
@@ -80,7 +80,6 @@
             </div>
           </li>
         </ul>
-
         <!--- #SIDEBAR SOCIAL LINK --->
         <div class="separator"></div>
         <ul class="social-list">
@@ -88,7 +87,7 @@
             <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
-          </li>  
+          </li>
           <li class="social-item">
             <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
@@ -108,184 +107,234 @@
     <div class="main-content">
       <!--- #NAVBAR COMPLETE --->
       <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a href="../index.html" class="navbar-link">Home</a></li>
-        <li class="navbar-item"><a href="../about.html" class="navbar-link">About</a></li>
-        <li class="navbar-item"><a href="../resume.html" class="navbar-link">Resume</a></li>
-        <li class="navbar-item"><a href="./Pages/Other.html" class="navbar-link">Services</a></li>
-        <li class="navbar-item"><a href="../portfolio.html" class="navbar-link">Portfolio</a></li>
-        <li class="navbar-item"><a href="../contact.html" class="navbar-link">Contact</a></li>
-      </ul>
-    </nav>
-      <!-- Navbar -->
-    
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="../about.html" class="navbar-link active" data-nav-link>About</a>
+            <!-- Dropdown menu for Service categories -->
+            <div class="dropdown-menu">
+              <a href="../Services/portfolio-development.html" class="dropdown-item">Portfolio-development</a>
+              <a href="../Services/Website-development.html" class="dropdown-item">Website-development</a>
+              <a href="../Services/ui-ux-design.html" class="dropdown-item">UI | UX-design</a>
+              <a href="../Services/hosting&domain.html" class="dropdown-item">Hosting & domain</a>
+              <a href="../Services/maintenaance&support.html" class="dropdown-item">Maintenaance & Support</a>
+              <a href="../Services/content-writing.html" class="dropdown-item">Content-writing</a>
+              <a href="../Services/student-project.html" class="dropdown-item">Student-project</a>
+              <a href="../Services/logo-design.html" class="dropdown-item">Logo-design</a>
+              <a href="../Services/Term And Condition.html" class="dropdown-item">Term & Condition</a>
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="../resume.html" class="navbar-link" data-nav-link>Resume</a>
+          </li>
+          <li class="navbar-item">
+            <a href="../portfolio.html" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+          <li class="navbar-item">
+            <a href="../contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+        </ul>
+      </nav>
+
 
       <!--- #ABOUT COMPLETE --->
-      <article class="about active" style="padding-bottom:100px;">
+      <article class="about active" data-page="about">
+        <a href="../about.html" class="link-button"
+          style="color: var(--orange-yellow-crayola); font: 1.4em sans-serif;">← Back to About Page</a>
         <br><br>
-      <header>
-        <h2 class="h2 article-title">Service Details</h2>
-        <p>Modern Web Development & UI/UX Design Services</p>
-      </header>
+        <header>
+          <h2 class="h2 article-title">Custom Website Development ..!</h2>
+          <p>Professional, Tailored Web Solutions for Your Business.</p>
+        </header>
 
-      <!-- Section: What I Do -->
-      <section class="service">
-        <h3 class="h3 article-title">What I Do</h3>
+        <!-- Section: Service Overview -->
+        <section class="about-text" style="margin-bottom:1px;">
+          <!--<h3 class="h3 article-title">Service Overview</h3>-->
+          <p>
+            Get a custom-built website designed specifically for your business needs. I create unique,
+            high-performance websites from scratch — no templates, no cookie-cutter designs. Every line
+            of code is written to match your brand identity and business goals.
+          </p>
+          <p>
+            Whether you need a corporate website, e-commerce platform, or a complex web application,
+            I deliver clean, scalable, and maintainable code that grows with your business.
+          </p>
+        </section>
 
-        <ul class="service-list">
+        <!-- Section: Who Is This For -->
+        <section class="service" style="margin-bottom:1px;">
+          <h3 class="h3 article-title">Who Is This For?</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <!--<div class="service-icon-box"><img src="../assets/images/icon-dev.svg" width="40"></div>-->
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Custom Design & Development</h4>
+                <p class="service-item-text">
+                  Unique designs tailored to your brand. Built with HTML5, CSS3, JavaScript, React, or Node.js.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <!--<div class="service-icon-box"><img src="../assets/images/icon-design.svg" width="40"></div>-->
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Responsive & Mobile-First</h4>
+                <p class="service-item-text">
+                  Your website will look perfect on all devices — desktop, tablet, and mobile.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <!--<div class="service-icon-box"><img src="../assets/images/icon-app.svg" width="40"></div>-->
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">SEO Optimization</h4>
+                <p class="service-item-text">
+                  Built-in SEO best practices to help your website rank higher on Google.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <!--<div class="service-icon-box"><img src="../assets/images/icon-dev.svg" width="40"></div>-->
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Performance Optimization</h4>
+                <p class="service-item-text">
+                  Fast loading speeds, optimized images, and clean code for the best user experience.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-          <li class="service-item">
-            <div class="service-icon-box"><img src="../assets/images/icon-dev.svg" width="40"></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Web Development</h4>
-              <p class="service-item-text">
-                HTML, CSS, JavaScript, React, Node.js — clean code, fast loading, high performance.
-              </p>
-            </div>
-          </li>
+        <!-- Technologies Used -->
+        <section class="about-text" style="margin-bottom:1px;">
+          <h3 class="h3 article-title"> Technologies Used </h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-content-box">
+                <h2>For Frontend</h2>
+                <p class="service-item-text">
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> HTML5 & CSS3 <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> JavaScript <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> React.js <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> Tailwind CSS / Bootstrap
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-content-box">
+                <h2>For Backend</h2>
+                <p class="service-item-text">
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> Node.js & Express.js <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> MongoDB / MySQL <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> RESTful APIs <br>
+                  <strong style="color:var(--orange-yellow-crayola);">✔</strong> Authentication & Security
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-          <li class="service-item">
-            <div class="service-icon-box"><img src="../assets/images/icon-design.svg" width="40"></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">UI/UX Design</h4>
-              <p class="service-item-text">
-                Wireframes, prototypes, user flows & modern design systems.
-              </p>
-            </div>
-          </li>
+        <!-- Development Process -->
+        <section class="about-text" style="margin-bottom: 1px;">
+          <h3 class="h3 article-title">Development Process</h3>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color: whitesmoke;"><B>1. Discovery & Planning</B></strong><br>
+            - We discuss your requirements, goals, target audience, and timeline.<br>
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color: whitesmoke;"><b>2. Design & Wireframe</b></strong><br>
+            - I create wireframes and mockups for your approval before development.<br>
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color: whitesmoke;"><b>3. Development</b></strong><br>
+            - Clean, maintainable code is written with regular progress updates.<br>
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color: antiquewhite;"><b>4. Testing & QA</b></strong><br>
+            - Rigorous testing across browsers and devices to ensure everything works perfectly.
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color: antiquewhite;"><b>5. Launch & Support</b></strong><br>
+            - Deployment, training, and ongoing support to keep your site running smoothly.
+          </p>
+        </section>
 
-          <li class="service-item">
-            <div class="service-icon-box"><img src="../assets/images/icon-app.svg" width="40"></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Responsive Websites</h4>
-              <p class="service-item-text">
-                Mobile-first layouts, accessibility, smooth interactions, fast loading.
-              </p>
-            </div>
-          </li>
+        <!-- FAQ -->
+        <section class="about-text" style="margin-bottom:1px;">
+          <h3 class="h3 article-title">Frequently Asked Questions</h3>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color:whitesmoke"><B>Q. How long does it take to build a custom website?</B></strong><br>
+            → Typically 2-6 weeks depending on complexity. Simple sites take 1-2 weeks, complex applications 4-8 weeks.
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color:whitesmoke;"><B>Q. Do you provide website content?</B></strong><br>
+            → I focus on development. You can provide content, or I can recommend content writers.
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color:whitesmoke;"><B>Q. Will I own the code?</B></strong><br>
+            → Yes! Upon completion and payment, you own 100% of the code and assets.
+          </p>
+          <p style="color: var(--orange-yellow-crayola);">
+            <strong style="color:whitesmoke;"><B>Q. Do you offer revisions?</B></strong><br>
+            → Yes — unlimited revisions during the design phase, and reasonable revisions during development.
+            <a style="font-size: 10px; color:#f9bf3f" href="./Term And Condition.html">(*T&C)</a>
+          </p>
+        </section>
 
-          <li class="service-item">
-            <div class="service-icon-box"><img src="../assets/images/icon-dev.svg" width="40"></div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">API & Form Integrations</h4>
-              <p class="service-item-text">
-                Web3Forms, Email API, WhatsApp Chat, Maps API, file upload systems.
-              </p>
-            </div>
-          </li>
+        <!-- Packages -->
+        <section class="about-text" style="margin-bottom: 1px;">
+          <h3 class="h3 article-title">Pricing & Packages</h3>
+          <p><strong style="color: var(--orange-yellow-crayola);">Starter — ₹4,999</strong> (Landing Pages)<br>
+            1-3 pages, responsive design, contact form, basic SEO, 1 week delivery.
+          </p>
+          <p><strong style="color: var(--orange-yellow-crayola);">Business — ₹9,999</strong> (Small Business Sites)<br>
+            4-8 pages, animations, WhatsApp integration, blog setup, 2-3 weeks delivery.
+          </p>
+          <p><strong style="color: var(--orange-yellow-crayola);">Enterprise — ₹19,999+</strong> (Complex Applications)<br>
+            10+ pages, custom features, admin panel, API integrations, 4-8 weeks delivery.
+          </p>
+        </section>
 
-        </ul>
-      </section>
+        <!-- Special Offer -->
+        <section class="about-text" style="margin-bottom:1px;">
+          <h3 class="h3 article-title">🎓 Student Special Offer</h3>
+          <p>
+            Are you a college student? Show your student ID and get <strong>20% off</strong> any package!
+            Your career starts with making a great first impression — let's make it count.<br>
+            <a style="color: var(--orange-yellow-crayola);" href="./Term And Condition.html"> * Term And Condition Apply</a>
+          </p>
+        </section>
 
-      <!-- What Makes My Work Different -->
-      <section class="about-text" style="margin-top:30px;">
-        <h3 class="h3 article-title">What Makes My Work Different</h3>
-        <p>
-          I blend clean UI + efficient, optimized code. Every project is built for:<br>
-          ✔ Mobile responsiveness  <br>
-          ✔ Smooth interactions  <br>
-          ✔ Fast loading  <br>
-          ✔ Accessibility  <br>
-          ✔ Modern visual design <br>  
-        </p>
-      </section>
+        <!-- Call to Action -->
+        <section class="about-text" style="margin-bottom:1px;">
+          <h3 class="h3 article-title">Ready to Build Your Website?</h3>
+          <p>
+            Let's discuss your project requirements and create something amazing together.
+            I'm here to transform your vision into a high-performing website.
+          </p>
+          <a href="../contact.html" class="contact-link" style="color: var(--orange-yellow-crayola); font-size:1.1rem;">Start Your Project →</a>
+        </section>
+        <br>
+        <a href="../about.html" class="link-button" style="color: var(--orange-yellow-crayola); font: 1.4em sans-serif">← Back to About Page</a>
+      </article>
 
-      <!-- Current Focus -->
-      <section class="about-text">
-        <h3 class="h3 article-title">Current Focus</h3>
-        <p>
-          Delivering high-quality freelance web projects  
-          Improving UI/UX for better engagement  
-          Full-stack & AI-assisted development  
-          Building modern business & portfolio websites  
-        </p>
-      </section>
 
-      <!-- Featured Work -->
-      <section class="about-text">
-        <h3 class="h3 article-title">Featured Work</h3>
-        <p>
-          ✔ Modern business websites  <br>
-          ✔ Portfolio sites  <br>
-          ✔ UI/UX systems  <br>
-          ✔ Animated interactive UI  <br>
-          ✔ Web3Forms integration  <br>
-        </p>
-        <a href="https://vikaskoledev.vercel.app" target="_blank" class="contact-link" style="color:#f9bf3f;">
-          View Portfolio →  
-        </a>
-      </section>
-
-      <!-- Skills Overview -->
-      <section class="about-text">
-        <h3 class="h3 article-title">Skills Overview</h3>
-
-        <h4 class="h4">Web Development</h4>
-        <p>
-          HTML5, CSS3, JavaScript, React.js, Node.js, SEO, mobile-first design, animations.
-        </p>
-
-        <h4 class="h4">UI/UX Design</h4>
-        <p>
-          Wireframes, prototypes, flows, clean modern UI, Figma, accessibility.
-        </p>
-
-        <h4 class="h4">APIs & Integrations</h4>
-        <p>
-          Web3Forms, Email API, WhatsApp Chat, Google Maps, file uploads.
-        </p>
-
-      </section>
-
-      <!-- FAQ -->
-      <section class="about-text">
-        <h3 class="h3 article-title">FAQ</h3>
-        <p><strong>Do you build full websites?</strong> <br> Yes — portfolios, landing pages, startup sites, service pages, etc.</p>
-        <p><strong>Do you handle hosting & domain?</strong> <br>Yes, complete setup + deployment.</p>
-        <p><strong>Do you work with students?</strong><br> Yes — portfolio packages available.</p>
-      </section>
-
-      <!-- Packages -->
-      <section class="about-text">
-        <h3 class="h3 article-title">Pricing & Packages</h3>
-
-        <p><strong>Basic — ₹2,999</strong> (Students, portfolios)  
-        <br>1–3 pages, contact form, mobile-ready.</p>
-
-        <p><strong>Standard — ₹6,999</strong> (Small businesses)  
-        <br>4–6 pages, animations, WhatsApp chat, API integration.</p>
-
-        <p><strong>Premium — ₹12,999</strong> (Startups)  
-        <br>6–12 pages, full UI/UX, backend support, performance optimization.</p>
-
-      </section>
-
-      <!-- Call to Action -->
-      <section class="about-text">
-        <h3 class="h3 article-title">Let’s Work Together</h3>
-        <p>
-          Whether you're a student, startup, business, or creator — I’d love to collaborate on your next project.
-        </p>
-        <a href="../contact.html" class="contact-link" style="color:#f9bf3f;font-size:1.1rem;">Contact Me →</a>
-      </section>
-
-    </article>
     </div>
 
   </main>
 
   <!--- #FOOTER COMPLETE --->
-    <footer class="footer">
-      <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
-      <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>January1 2026 2025</b>. All rights reserved.</small>
-    </footer>
+  <footer class="footer">
+    <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+    <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>26 January 2026</b>. All rights reserved.</small>
+  </footer>
 
   <!--- custom js link --->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="./assets/js/visitor-counter.js"></script>
+  <script src="../assets/js/script.js"></script>
 
-  <!--- ionicon link --->
+  <!--- ionicons link --->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

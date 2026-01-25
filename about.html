@@ -40,13 +40,14 @@
       <div class="sidebar-info_more">
         <div class="separator"></div>
         <ul class="contacts-list">
-            <li class="contact-item">
+          <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="document-text-outline"></ion-icon>
             </div>
             <div class="contact-info">
               <p class="contact-title">CV.developer >></p>
-              <a href="./assets/images/VIKAS KOLE 20251226.pdf" class="contact-link" download="VIKAS_KOLE_Developer_CV.pdf">Download</a>
+              <a href="./assets/images/VIKAS KOLE 20251226.pdf" class="contact-link"
+                download="VIKAS_KOLE_Developer_CV.pdf">Download</a>
               <!--<p class="contact-title">CV.hacker >></p>
               <a href="./assets/images/VIKAS_KOLE_CyberSecurity.pdf" class="contact-link" download="VIKAS_KOLE_Cybersecurity_CV.pdf">Download</a>-->
             </div>
@@ -86,7 +87,7 @@
             <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
               <ion-icon name="logo-github"></ion-icon>
             </a>
-          </li>  
+          </li>
           <li class="social-item">
             <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
               <ion-icon name="logo-linkedin"></ion-icon>
@@ -112,13 +113,22 @@
           </li>
           <li class="navbar-item">
             <a href="about.html" class="navbar-link active" data-nav-link>About</a>
+            <!-- Dropdown menu for Service categories -->
+            <div class="dropdown-menu">
+              <a href="./Services/portfolio-development.html" class="dropdown-item">Portfolio-development</a>
+              <a href="./Services/Website-development.html" class="dropdown-item">Website-development</a>
+              <a href="./Services/ui-ux-design.html" class="dropdown-item">UI | UX-design</a>
+              <a href="./Services/hosting&domain.html" class="dropdown-item">Hosting & domain</a>
+              <a href="./Services/maintenaance&support.html" class="dropdown-item">Maintenaance & Support</a>
+              <a href="./Services/content-writing.html" class="dropdown-item">Content-writing</a>
+              <a href="./Services/student-project.html" class="dropdown-item">Student-project</a>
+              <a href="./Services/logo-design.html" class="dropdown-item">Logo-design</a>
+              <a href="./Services/Term And Condition.html" class="dropdown-item">Term & Condition</a>
+            </div>
           </li>
           <li class="navbar-item">
             <a href="resume.html" class="navbar-link" data-nav-link>Resume</a>
           </li>
-          <!--<li class="navbar-item">
-            <a href="./Pages/Services Page.html" class="navbar-link" data-nav-link>Services</a>
-          </li>-->
           <li class="navbar-item">
             <a href="portfolio.html" class="navbar-link" data-nav-link>Portfolio</a>
           </li>
@@ -127,17 +137,14 @@
           </li>
         </ul>
       </nav>
-      
 
       <!--- #ABOUT COMPLETE --->
       <article class="about active" data-page="about">
         <header>
           <h2 class="h2 article-title">About me</h2>
-          <p>
-            Who Am I..?
-          </p>
+          <p> Who Am I..?</p>
         </header>
-        
+
         <section class="about-text">
           <p>
             Hello! I'm Vikas Kole, a passionate freelance web developer based in Pandharpur, Maharashtra, India.
@@ -163,7 +170,6 @@
         <section class="service" id="service">
           <h3 class="h3 article-title">Our Services..</h3>
           <p>What i'm Offered:</p><br>
-
           <ul class="service-list">
             <!--- #service-item 1 --->
             <li class="service-item">
@@ -171,8 +177,7 @@
                 <img src="./assets/images/icon-app.svg" alt="design icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/portfolio-development.html" target="_blank">-->
+                <a href="./Services/portfolio-development.html">
                   <h4 class="h4 service-item-title">Professional Portfolio Development</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -186,8 +191,7 @@
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/Website-development.html" target="_blank">-->
+                <a href="./Services/Website-development.html">
                   <h4 class="h4 service-item-title">Custom Website Development from scratch</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -201,8 +205,7 @@
                 <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/ui-ux-design.html" target="_blank">-->
+                <a href="./Services/ui-ux-design.html">
                   <h4 class="h4 service-item-title">Modern UI/UX Design</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -216,8 +219,7 @@
                 <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/hosting&domain.html" target="_blank">-->
+                <a href="./Services/hosting&domain.html">
                   <h4 class="h4 service-item-title">Hosting & Domain Setup</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -231,8 +233,7 @@
                 <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/maintenaance&support.html"target="_blank">-->
+                <a href="./Services/maintenaance&support.html">
                   <h4 class="h4 service-item-title">Website Maintenance & Support</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -246,12 +247,11 @@
                 <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/content-writing.html" target="_blank">-->
+                <a href="./Services/content-writing.html">
                   <h4 class="h4 service-item-title">SEO-friendly web & landing page content Writing</h4>
-                    <p class="service-item-text">
-                      Read More >>>
-                    </p>
+                  <p class="service-item-text">
+                    Read More >>>
+                  </p>
                 </a>
               </div>
               </a>
@@ -262,8 +262,7 @@
                 <img src="./assets/images/icon-app.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/student-project.html" target="_blank">-->
+                <a href="./Services/student-project.html">
                   <h4 class="h4 service-item-title">BE / B.Tech Student Project</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -277,8 +276,7 @@
                 <img src="./assets/images/icon-design.svg" alt="Web development icon" width="40">
               </div>
               <div class="service-content-box">
-                <a href="./Services/Services Page.html">
-                <!--<a href="./Services/logo-design.html" target="_blank">-->
+                <a href="./Services/logo-design.html">
                   <h4 class="h4 service-item-title">Logo Design</h4>
                   <p class="service-item-text">
                     Read More >>>
@@ -287,17 +285,13 @@
               </div>
             </li>
           </ul>
-
         </section>
 
 
         <!--- testimonials --->
         <section class="testimonials" id="testimonial">
           <h3 class="h3 article-title">Testimonials</h3>
-          <p>
-            Here’s what my clients have to say about working with me:
-          </p><br>
-
+          <p> Here’s what my clients have to say about working with me:</p><br>
           <ul class="testimonials-list has-scrollbar">
             <!--- testimonials-item 1 --->
             <li class="testimonials-item">
@@ -382,11 +376,8 @@
                   </p>
                 </div>
               </div>
-
           </ul>
-
         </section>
-
 
         <!--- testimonials modal --->
         <div class="modal-container" data-modal-container>
@@ -406,14 +397,13 @@
               <div data-modal-text>
                 <p>
                   Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit abet, ulmaceous caddie
+                  lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit abet,
+                  ulmaceous caddie
                   connecter advising edit, sdes do et elusion tempo incident ut laborers dolor magnates alai.
                 </p>
               </div>
             </div>
-
           </section>
-
         </div>
 
       </article>
@@ -422,10 +412,10 @@
   </main>
 
   <!--- #FOOTER COMPLETE --->
-    <footer class="footer">
-      <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
-      <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>January1 2026 2025</b>. All rights reserved.</small>
-    </footer>
+  <footer class="footer">
+    <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+    <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on <b>26 January 2026</b>. All rights reserved.</small>
+  </footer>
 
   <!--- custom js link --->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

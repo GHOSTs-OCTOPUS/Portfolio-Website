@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service page/ Terms & Conditions | Freelancer Web Developer</title>
+    <!--- favicon --->
+    <link rel="shortcut icon" href="../assets/images/logo 1.webp" type="image/x-icon" />
+    <!--- custom css link --->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!--- google font link --->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        .terms-content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.011);
+            border-radius: 10px;
+        }
+
+        .terms-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin: 15px 0;
+            color: #f8f6f6;
+        }
+
+        .terms-list li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .highlight {
+            color: var(--orange-yellow-crayola);
+            font-weight: 600;
+        }
+
+        .important-note {
+            background: rgba(255, 165, 0, 0.1);
+            border-left: 4px solid var(--orange-yellow-crayola);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--- #MAIN --->
+    <main>
+        <!--- #SIDEBAR COMPLETE --->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="../assets/images/myavatar.png" alt="Vikas Kole." width="80" />
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Vikas Kole">Vikas Kole.</h1>
+                    <p class="title">Freelancer Web Developer</p><br />
+                    <p class="title">UI/UX Designer</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+            <!--- #SIDEBAR INFO --->
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">CV.developer >></p>
+                            <a href="../assets/images/VIKAS KOLE 20251226.pdf" class="contact-link" download="VIKAS_KOLE_Developer_CV.pdf">Download</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:kolevikasxyz@gmail.com" class="contact-link">kolevikasxyz@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+                            <a href="tel:+917219447058" class="contact-link">+91 7219447058</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Pandharpur, MH, India</address>
+                        </div>
+                    </li>
+                </ul>
+                <!--- #SIDEBAR SOCIAL LINK --->
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://github.com/GHOSTs-OCTOPUS" class="social-link" target="_blank">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/vikas-kole-vk786" class="social-link" target="_blank">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/kolevikki786" class="social-link" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!--- #main-content Complete --->
+        <div class="main-content">
+            <!--- #NAVBAR COMPLETE --->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="../about.html" class="navbar-link active" data-nav-link>About</a>
+                        <!-- Dropdown menu for Service categories -->
+                        <div class="dropdown-menu">
+                            <a href="../Services/portfolio-development.html" class="dropdown-item">Portfolio-development</a>
+                            <a href="../Services/Website-development.html" class="dropdown-item">Website-development</a>
+                            <a href="../Services/ui-ux-design.html" class="dropdown-item">UI | UX-design</a>
+                            <a href="../Services/hosting&domain.html" class="dropdown-item">Hosting & domain</a>
+                            <a href="../Services/maintenaance&support.html" class="dropdown-item">Maintenaance & Support</a>
+                            <a href="../Services/content-writing.html" class="dropdown-item">Content-writing</a>
+                            <a href="../Services/student-project.html" class="dropdown-item">Student-project</a>
+                            <a href="../Services/logo-design.html" class="dropdown-item">Logo-design</a>
+                            <a href="../Services/Term And Condition.html" class="dropdown-item">Term & Condition</a>
+                        </div>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="../resume.html" class="navbar-link" data-nav-link>Resume</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="../portfolio.html" class="navbar-link" data-nav-link>Portfolio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="../contact.html" class="navbar-link" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--- #TERMS & CONDITIONS --->
+            <article class="about active" data-page="about">
+                <a href="../about.html" class="link-button" style="color: var(--orange-yellow-crayola); font: 1.4em sans-serif">← Back to About Page</a>
+                <br />
+                <div class="terms-content">
+                    <header>
+                        <h2 class="h2 article-title">Terms & Conditions</h2>
+                        <p>Last Updated: 15 February 2026</p>
+                        <strong style="color: brown">
+                            * This are overall T&C, Final term and conditions are with contract paper.
+                        </strong><br />
+                    </header>
+
+                    <div class="important-note">
+                        <p>
+                            <strong>IMPORTANT:</strong> Please read these Terms & Conditions
+                            carefully before using any of our services. By hiring our
+                            services, you agree to be bound by these terms.<br />
+                        </p>
+                    </div>
+
+                    <!-- Section 1 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">1. Services Overview</h3>
+                        <p>We offer the following services:</p>
+                        <div class="skills-section">
+                            <div class="skills-container">
+                                <ul class="terms-list" style="color: var(--orange-yellow-crayola)">
+                                    <li>🔹 Portfolio Development</li>
+                                    <li>🔹 Website Development</li>
+                                    <li>🔹 UI/UX Design</li>
+                                    <li>🔹 Hosting & Domain Services</li>
+                                </ul>
+                            </div>
+                            <div class="skills-container">
+                                <ul class="terms-list" style="color: var(--orange-yellow-crayola)">
+                                    <li>🔹 Maintenance & Support</li>
+                                    <li>🔹 Content Writing</li>
+                                    <li>🔹 Student Project Assistance</li>
+                                    <li>🔹 Logo Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>
+                            All services are provided on a project basis with specific
+                            deliverables as mentioned in the service description.
+                        </p>
+                    </section>
+
+                    <!-- Section 2 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">2. Payment Terms</h3>
+                        <ul class="terms-list">
+                            <li>
+                                <span class="highlight">🔹Advance Payment:</span> 
+                                30% advance payment is required before starting any project.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Next Installment:</span> 
+                                50% on core Feature completion.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Final Payment:</span> 
+                                Remaining 20% payment upon project completion before delivery of final files.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Payment Methods:</span> 
+                                UPI, Bank Transfer, or other mutually agreed methods.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Taxes:</span> 
+                                All prices are exclusive of GST unless specified otherwise.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Late Payment:</span>
+                                Projects may be put on hold for late payments beyond 7 days. And additional charges apply as penalty
+                            </li>
+                            <div class="important-note">
+                                <p>
+                                    <strong style="color: rgba(165, 42, 42, 0.637)">IMPORTANT:</strong>
+                                    All payments are non-refundable once work begins.
+                                </p>
+                            </div>
+                        </ul>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">3. Project Timeline & Delivery</h3>
+                        <ul class="terms-list">
+                            <li>🔹 timelines are estimates and may vary based on project complexity.</li>
+                            <li>🔹 Delays caused by client (late feedback, content delivery,etc.) will extend the timeline.</li>
+                            <li>🔹 We commit to regular communication and updates throughout the project.</li>
+                            <li>🔹 Final delivery includes all source files as mentioned in the package.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">4. Revisions & Changes</h3>
+                        <ul class="terms-list">
+                            <li>
+                                <span class="highlight">🔹Logo Design:</span>
+                                Unlimited revisions until final approval.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Web Development:</span> 
+                                3 rounds of revisions included in standard packages.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Content Writing:</span> 
+                                2 rounds of revisions included.
+                            </li>
+                            <li><span class="highlight">🔹Major Changes:</span>
+                                Significant changes after approval may incur additional charges.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">5. Student Discounts & Offers</h3>
+                        <ul class="terms-list">
+                            <li>🔹 Student discounts require valid student ID proof.</li>
+                            <li>🔹 Discounts cannot be combined with other offers.</li>
+                            <li>🔹 Group discounts require minimum 3 students from same institution.</li>
+                            <li>🔹 Discounts apply only to standard pricing, not already discounted packages.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 6 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">6. Intellectual Property Rights</h3>
+                        <ul class="terms-list">
+                            <li>🔹 Client owns final delivered work after full payment.</li>
+                            <li>🔹 We retain the right to display completed work in our portfolio.</li>
+                            <li>🔹 Source code, designs, and content remain our property until full payment.</li>
+                            <li>🔹 Third-party assets (fonts, images, plugins) may have their own licenses.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 7 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">7. Cancellation & Refund Policy</h3>
+                        <ul class="terms-list">
+                            <li>
+                                <span class="highlight">🔹Cancellation before start:</span>
+                                100% refund of advance payment.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹Cancellation during project:</span>
+                                Advance payment are Non refund after work start.
+                            </li>
+                            <li>
+                                <span class="highlight">🔹No refund</span> after project
+                                completion and delivery.
+                            </li>
+                            <li>* Refunds processed within 7-10 business days.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 8 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">
+                            8. Student Project Specific Terms
+                        </h3>
+                        <ul class="terms-list">
+                            <li>🔹 Projects are for educational purposes only.</li>
+                            <li>🔹 We provide guidance and assistance, not complete projects without student involvement.</li>
+                            <li>🔹 Students must understand and be able to explain their project code.</li>
+                            <li>🔹 We are not responsible for academic outcomes or grades.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 9 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">9. Hosting & Domain Terms</h3>
+                        <ul class="terms-list">
+                            <li>🔹 Hosting and domain registration are third-party services.</li>
+                            <li>🔹 Renewal is client's responsibility unless under maintenance plan.</li>
+                            <li>🔹 We are not liable for third-party service outages.</li>
+                            <li>🔹 Domain transfer fees may apply if moving away from our services.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 10 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">10. Maintenance & Support</h3>
+                        <ul class="terms-list">
+                            <li>🔹 Free support period as mentioned in each package.</li>
+                            <li>🔹 Support covers bug fixes and minor adjustments only.</li>
+                            <li>🔹 New features or major changes are billed separately.</li>
+                            <li>🔹 Response time: 24-48 hours during business days.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 11 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">11. Liability & Warranty</h3>
+                        <ul class="terms-list">
+                            <li>🔹 We warrant our work to be free from defects for 30 days post-delivery.</li>
+                            <li>🔹 Not liable for indirect damages or loss of business.</li>
+                            <li>🔹 Maximum liability limited to project cost.</li>
+                            <li>🔹 Client responsible for backing up their website/content.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 12 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">12. Client Responsibilities</h3>
+                        <ul class="terms-list">
+                            <li>🔹 Provide clear requirements and timely feedback.</li>
+                            <li>🔹 Provide all necessary content (text, images, logos) on time.</li>
+                            <li>🔹 Make timely payments as per agreement.</li>
+                            <li>🔹 Test and approve work at various stages.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 13 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">13. Confidentiality</h3>
+                        <p>We maintain strict confidentiality of:</p>
+                        <ul class="terms-list">
+                            <li>🔹 Client business information</li>
+                            <li>🔹 Project details</li>
+                            <li>🔹 Source code (until public release)</li>
+                            <li>🔹 Financial information</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 14 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">14. Changes to Terms</h3>
+                        <p>
+                            We reserve the right to modify these terms at any time. Clients
+                            will be notified of significant changes. Continued use of
+                            services constitutes acceptance of modified terms.
+                        </p>
+                    </section>
+
+                    <!-- Section 15 -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">15. Governing Law</h3>
+                        <p>
+                            These terms shall be governed by and construed in accordance
+                            with the laws of India. Any disputes shall be subject to the
+                            exclusive jurisdiction of courts in Pandharpur,Dist. Solapur,
+                            Maharashtra.
+                        </p>
+                    </section>
+
+                    <!-- Contact for Questions -->
+                    <section class="terms-section">
+                        <h3 class="h3 article-title">Contact for Questions</h3>
+                        <p>If you have any questions about these Terms & Conditions, please contact us:</p>
+                        <p>🔹 Email:
+                            <a href="mailto:kolevikasxyz@gmail.com" style="color: var(--orange-yellow-crayola)">kolevikasxyz@gmail.com</a>
+                        </p>
+                        <p>🔹 Phone:
+                            <a href="tel:+917219447058" style="color: var(--orange-yellow-crayola)">+91 7219447058</a>
+                        </p>
+                    </section>
+
+                    <br />
+                    <a href="../about.html" class="link-button" style=" color: var(--orange-yellow-crayola); font: 1.4em sans-serif;">← Back to About Page</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!--- #FOOTER COMPLETE --->
+    <footer class="footer">
+        <small class="message">Thanks for visiting to ME and happy coding...<b>❤</b></small>
+        <small class="copyright">&copy; Developed By <b>GHOSTs-OCTOPUS</b>. Updated on
+            <b>26 January 2026</b>. All rights reserved.</small>
+    </footer>
+
+    <!--- custom js link --->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <!--- ionicons link --->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
