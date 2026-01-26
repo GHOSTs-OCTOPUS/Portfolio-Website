@@ -2017,6 +2017,156 @@ p {
   margin-bottom: 10px;
 }
 
+/* Rectangular GIF Container Styles */
+    .gif-rectangle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 30px auto;
+      padding: 15px;
+      max-width: 900px;
+      width: 100%;
+    }
+    
+    .gif-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      aspect-ratio: 16/9; /* Creates rectangular shape (16:9 ratio) */
+      overflow: hidden;
+      border-radius: 8px; /* Slightly rounded corners for modern look */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .rectangular-gif {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures GIF fills the rectangle */
+      display: block;
+    }
+    
+    /* Text overlay on the GIF */
+    .gif-overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      width: 100%;
+      padding: 0 20px;
+      z-index: 2;
+    }
+    
+    .gif-text-line1 {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    
+    .gif-text-line2 {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    
+    /* Overlay effect for better text readability */
+    .gif-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+      z-index: 1;
+      border-radius: 8px;
+    }
+    
+    /* Media Queries for different screen sizes */
+    @media (max-width: 1024px) {
+      .gif-wrapper {
+        max-width: 700px;
+        aspect-ratio: 16/9;
+      }
+      
+      .gif-text-line1 {
+        font-size: 2.2rem;
+      }
+      
+      .gif-text-line2 {
+        font-size: 1.3rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .gif-rectangle-container {
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      
+      .gif-wrapper {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+      }
+      
+      .gif-text-line1 {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+      }
+      
+      .gif-text-line2 {
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .gif-rectangle-container {
+        margin-bottom: 15px;
+        padding: 8px;
+      }
+      
+      .gif-wrapper {
+        aspect-ratio: 4/3; /* Slightly squarer on mobile */
+        border-radius: 6px;
+      }
+      
+      .gif-text-line1 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+      
+      .gif-text-line2 {
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+      }
+      
+      .gif-wrapper::before {
+        background: rgba(0, 0, 0, 0.4); /* Darker overlay on mobile for better contrast */
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .gif-wrapper {
+        max-width: 900px;
+      }
+      
+      .gif-text-line1 {
+        font-size: 3rem;
+      }
+      
+      .gif-text-line2 {
+        font-size: 1.8rem;
+      }
+    }
+
 .form-title {
   margin-bottom: 20px;
 }
